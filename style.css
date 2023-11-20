@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+.nav-titles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .main-container  {
     height: 350px;
     background-image: url(background.jpg);
@@ -32,6 +38,24 @@
     background-color: grey;
 }
 
-.hola   {
-    border: none;
+.about-main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-main h1 {
+    padding-top: 75px;
+}
+
+.glassboard {
+    padding-top: 30px;
+}
+
+.imgabout   {
+    position: relative;
+    top: 45px;
+    width: 200px;
+    height: 180px;
 }
