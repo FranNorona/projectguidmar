@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./multimedia/logo.ico" type="image/x-icon">
     <title>Inicio - GuidMar</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-md nav-container navbar-dark fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Logo</a>
+              <a class="navbar-brand logo" href="./index.html"><img src="./multimedia/logo.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -44,7 +45,7 @@
             <div class="main-principal col-12">
                 <h1>Bienvenido</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti temporibus perspiciatis explicabo iste, recusandae molestiae cumque ipsum nam soluta, pariatur cum cupiditate veniam fugit in laboriosam ad neque ex?</p>
-                <button class="col-4">Comenzar</button>
+                <button class="button-main col-4">Comenzar<span></span></button>
             </div>
         <!-- Averiguar como ocultar los elementos con BS o hacerlo directamente en CSS -->
             <div class="main-secundario">
@@ -55,39 +56,44 @@
         </div>
     </main>
     <section class="container-fluid section-main">
-        <h2>Método</h2>
         <div class="row">
-            <div class="container-fluid card-one col-11 col-sm-10 mt-2">
-              <div class="row">
-                <div class="col-sm-6">
-                    <h3>Comic Principal</h3>
+            <div class="container-fluid card-one col-11 mt-2 mb-2">
+              <div class="col-12 row">
+                <div class="text-center">
+                    <h2>Comic Principal</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, porro.</p>
                 </div>
-                    <img class="img-fluid col-sm-6 d-flex" src="./multimedia/background.jpg" alt="">
-              </div>
-            </div>
-            <div class="container-fluid card-one col-11 col-sm-10 mt-2">
-              <div class="row">
-                <img class="img-fluid col-sm-6" src="./multimedia/background.jpg" alt="">
-                <div class="col-sm-6">
-                  <h3>Comic Extra</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, maxime.</p>
+                <div class="card-one-img">
+                  <img class="img-fluid" src="./multimedia/comicprinc.jpg" alt="">
                 </div>
               </div>
             </div>
         </div>
+        <div class="row">
+          <div class="container-fluid card-one col-11 mt-2 mb-2">
+            <div class="col-12 row">
+              <div class="text-center">
+                  <h2>Comic Extra</h2>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, porro.</p>
+              </div>
+              <div class="card-one-img">
+                <img class="img-fluid" src="./multimedia/comicextra.jpg" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
     </section>
-    <footer class="container-fluid footer-container text-center">
-          <p class="mt-2">Copyrigth - GuidMar 2023</p>
-        <div class="col-12 mb-2">
+    <footer class="container-fluid footer-container">
+        <p>Copyrigth - GuidMar 2023</p>
+        <div class="icons-footer">
           <a href="">
-            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-instagram fa-beat-fade" style="color: #ff0000;"></i>
           </a>
           <a href="">
-            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-x-twitter fa-beat-fade" style="color: #ff0000;"></i>
           </a>
           <a href="">
-            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <i class="fa-solid fa-file-arrow-down fa-beat-fade" style="color: #ff0000;"></i>
           </a>
         </div>
     </footer>
