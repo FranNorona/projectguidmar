@@ -1,0 +1,37 @@
+*   {
+    box-sizing: border-box;
+}
+
+.main-container  {
+    height: 350px;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-principal h1  {
+    padding-top: 75px;
+}
+
+.main-secundario img {
+    display: none;
+}
+
+.section-main   {
+    background-color: aqua;
+}
+
+.section-main  h2 {
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+}
+
+.card-one {
+    text-align: center;
+    background-color: grey;
+}
+
+.hola   {
+    border: none;
+}
