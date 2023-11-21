@@ -32,6 +32,7 @@ body    {
 }
 
 .logo img   {
+    margin-left: 2px;
     width: 40px;
     height: 40px;
 }
@@ -48,7 +49,7 @@ body    {
 }
 /* -----INDEX - COMIENZA EL MAIN----- */
 .main-container  {
-    height: 450px;
+    height: 550px;
     background-image: linear-gradient(345deg, rgba(3,0,0,1)45%, rgba(255,255,255,0.1)80%), url(./multimedia/back.jpg);
 }
 
@@ -58,13 +59,13 @@ body    {
 }
 
 .main-principal h1  {
-    padding-top: 85px;
+    padding-top: 100px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 40px;
 }
 
 .main-principal p   {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .button-main    {
@@ -80,6 +81,10 @@ body    {
 
 .button-main:hover  {
     box-shadow: inset 0 0 10px rgba(227, 39, 35, 1), 0 0 9px 3px rgba(227, 39, 35, 0.7);
+}
+
+.main-secundario    {
+    display: none;
 }
 
 .main-secundario img {
@@ -108,8 +113,21 @@ body    {
     background-image: url(./multimedia/arcoiris.jpg);
 }
 
+.card-one-img   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-one-img img  {
     border-radius: 5%;
+}
+
+.card-one-titles    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-main div {
@@ -151,4 +169,51 @@ body    {
 
 .icons-footer a {
     text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px){
+        .logo img   {
+        margin-left: -5px;
+        width: 40px;
+        height: 40px;
+        }
+
+        .nav-titles {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px;
+            margin-left: 130px;
+        }
+}
+
+@media screen and (min-width: 992px){
+    .logo img   {
+        margin-left: 5px;
+        margin-right: 50px;
+        width: 40px;
+        height: 40px;
+        }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        height: 550px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,1)45%, rgba(255,255,255,0.1)80%), url(./multimedia/back.jpg);
+    }
+
+    .main-secundario    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        height: 370px;
+    }
+
+    .main-secundario img    {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
 }
