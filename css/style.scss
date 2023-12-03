@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@200&family=Lato:wght@300&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Roboto+Condensed:wght@600&family=Roboto:wght@100;300;400&display=swap');
+
+//Paleta de Colores
+$colorprimario: #C70C1D;
+$colortext: white;
+$colortext2: grey;
+
+//Fuentes
+$fontstitles: 'Roboto Condensed', sans-serif;
+$fontstext: 'Roboto', sans-serif;
+
+@mixin direccion ($dsp, $flexd, $justify, $align) {
+    display: $dsp;
+    flex-direction: $flexd;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin boton ($width, $height, $fonttam, $lspace, $borrad, $bor) {
+    width: $width;
+    height: $height;
+    font-size: $fonttam;
+    letter-spacing: $lspace;
+    border-radius: $borrad;
+    border: $bor;
+}
+
+*   {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body    {
+    background-color: black;
+    font-family: $fontstext;
+}
+
+a   {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+/* -----COMIENZA EL HEADER y NAV----- */
+.nav-container  {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: bold;
+    color: white;
+}
+
+.logo img   {
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-titles {
+    @include direccion (flex, row, flex-start, center);
+    margin-left: 15px;
+}
+/* -----INDEX - COMIENZA EL MAIN----- */
+.main-container  {
+    height: 550px;
+    letter-spacing: 1px;
+    background-image: linear-gradient(345deg, rgba(3,0,0,1)45%, rgba(255,255,255,0.1)80%), url(../multimedia/back.jpg);
+}
+
+.main-principal {
+    height: auto;
+    color: $colortext;
+
+        h1  {
+            padding-top: 100px;
+            font-family: $fontstitles;
+            font-size: 40px;
+        }
+
+        p   {
+            padding-top: 70px;
+        }
+}
+
+.button-main    {
+    @include boton (140px, 40px, 15px, 1px, 8px, 1px solid #C70C1D);
+    background: linear-gradient(to right, rgba(199, 12, 29, 0.3) 1%, transparent 40%,transparent 60% , rgba(199, 12, 29, 0.3) 100%);
+    color: $colortext;
+}
+
+.button-main:hover  {
+    box-shadow: inset 0 0 10px rgba(227, 39, 35, 1), 0 0 9px 3px rgba(227, 39, 35, 0.7);
+}
+
+.main-secundario    {
+    display: none;
+
+        img     {
+            display: none;
+        }
+}
+/* -----COMIENZA EL SECTION - INDEX----- */
+.section-main   {
+    height: auto;
+    margin-bottom: 20px;
+    color: $colortext;
+    text-align: center;
+}
+
+.card-one {
+    @include direccion (flex, column, space-evenly, center);
+    height: auto;
+    color: $colortext;
+    border-radius: 10px;
+    background-image: url(../multimedia/arcoiris.jpg);
+}
+
+.card-one:hover{
+    scale: 0.9;
+    transition: 1.5s;
+    animation: ease-in-out;
+}
+
+.centrado-container {
+    @include direccion (flex, row, space-evenly, center);
+}
+
+.card-one-titles    {
+    @include direccion (flex, column, center, center);
+    letter-spacing: 0.5px;
+
+        h2  {
+            padding: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+        }
+
+        p   {
+            font-size: 15px;
+        }
+}
+
+.card-one-img   {
+    @include direccion (flex, row, center, center);
+    padding-bottom: 20px;
+
+        img {
+            border-radius: 4%;
+        }
+}
+/* -----COMIENZA PAGE NOSOTROS----- */
+.main_general_about	{
+	color: $colortext;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+
+    .main_general_con	{
+        @include direccion(flex, column, space-around, center);
+        padding-top: 75px;
+
+        .main_about_left	{
+            @include direccion(flex, column, center, center);
+            padding: 10px;
+            text-align: center;
+
+            h1  {
+                margin-right: 55px;
+                font-family: $fontstitles;
+                font-size: 30px;
+            }
+
+            h2  {
+                margin-left: 65px;
+                font-family: $fontstitles;
+                font-size: 30px;
+            }
+
+            p   {
+                padding-top: 40px;
+            }
+        }
+
+        .main_about_rigth   {
+            @include direccion(flex, column, center, center);
+            text-align: center;
+            padding: 10px;
+
+            p   {
+                color: $colortext2;
+            }
+        }
+    }
+}
+.main_section_gen   {
+    h4  {
+        font-family: $fontstitles;
+        font-size: 25px;
+        padding: 10px;
+        color: $colortext;
+        text-align: center;
+        }
+}
+.main_section_con	{
+    @include direccion (flex, column, center, center);
+    color: $colortext;
+
+    .section_con_left	{
+        @include direccion (flex, column, center, center);
+        height: 250px;
+        padding: 10px;
+        margin-bottom:  10px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/ubi.jpg);
+        border-radius: 10px;
+    }
+
+    .section_con_rigth	{
+        padding: 0px;
+    }
+}
+
+.center_flex  {
+        @include direccion (flex, column, center, center);
+}
+
+.section_con_rigthone	{
+    @include direccion (flex, column, space-evenly, center);
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+    border-radius: 10px;
+}
+
+.section_con_rigthone h5    {
+    padding-top: 15px;
+}
+
+.section_con_rigthtwo	{
+    @include direccion (flex, column, center, center);
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+    border-radius: 10px;
+}
+
+.section_con_rigthtwo h5    {
+    padding-top: 15px;
+}
+/* -----COMIENZA PAGE EVENTO----- */
+
+/* -----COMIENZA EL FOOTER----- */
+.footer-container   {
+    @include direccion (flex, column, center, center);
+    height: 80px;
+    color: gray;
+    background-color: $colortext;
+}
+
+.icons-footer   {
+    @include direccion (flex, row, space-around, center);
+    width: 120px;
+    font-size: 20px;
+    list-style: none;
+}
+
+.icons-footer a {
+    text-decoration: none;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 576px) {
+    .main_general_about	{
+        color: $colortext;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+    
+        .main_general_con	{
+            @include direccion(flex, row, space-around, center);
+            padding-top: 75px;
+    
+            .main_about_left	{
+                @include direccion(flex, column, center, flex-start);
+                padding: 10px;
+                text-align: left;
+    
+                h1  {
+                    margin-right: 55px;
+                    font-family: $fontstitles;
+                    font-size: 35px;
+                }
+    
+                h2  {
+                    margin-left: 65px;
+                    font-family: $fontstitles;
+                    font-size: 35px;
+                }
+    
+                p   {
+                    padding-top: 40px;
+                }
+            }
+    
+            .main_about_rigth   {
+                @include direccion(flex, column, flex-end, center);
+                text-align: center;
+                padding: 10px;
+    
+                p   {
+                    color: $colortext2;
+                }
+            }
+        }
+    }
+
+    .center_flex   {
+        @include direccion (flex, row, space-evenly, center);
+    }
+
+    .section_con_rigthone	{
+        @include direccion (flex, column, center, center);
+        height: 120px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        border-radius: 10px;
+    }
+
+    .section_con_rigthtwo	{
+        @include direccion (flex, column, center, center);
+        height: 120px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .logo img   {
+        margin-left: 0px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-titles {
+        @include direccion (flex, row, flex-end, center);
+        margin-left: 15px;
+    }
+
+    .main-principal h1  {
+        padding-top: 100px;
+        font-family: $fontstitles;
+        font-size: 45px;
+    }
+
+    .card-one {
+        @include direccion (flex, column, space-evenly, center);
+        height: 250px;
+        color: $colortext;
+        border-radius: 10px;
+        background-image: url(../multimedia/arcoiris.jpg);
+    }
+
+    .card-one-img   {
+        @include direccion (flex, row, center, center);
+        width: 220px;
+        height: 220px;
+    }
+
+    .card-one-img   {
+        @include direccion (flex, row, center, center);
+        padding-bottom: 0px;
+    }
+
+    .main_general_about	{
+        color: $colortext;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+    
+        .main_general_con	{
+            @include direccion(flex, row, space-around, center);
+            padding-top: 75px;
+    
+            .main_about_left	{
+                @include direccion(flex, column, center, flex-start);
+                height: 500px;
+                padding: 10px;
+                text-align: left;
+    
+                h1  {
+                    margin-right: 55px;
+                    font-family: $fontstitles;
+                    font-size: 35px;
+                }
+    
+                h2  {
+                    margin-left: 65px;
+                    font-family: $fontstitles;
+                    font-size: 35px;
+                }
+    
+                p   {
+                    padding-top: 40px;
+                }
+            }
+    
+            .main_about_rigth   {
+                @include direccion(flex, column, center, center);
+                text-align: center;
+                padding: 10px;
+    
+                p   {
+                    color: $colortext2;
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 992px){
+    .main-container {
+        display: flex;
+        justify-content: center;
+        height: 550px;
+        background-image: none;
+    }
+
+    .main-secundario    {
+        @include direccion (flex, row, center, center);
+        padding-top: 120px;
+        height: 390px;
+        width: 50%;
+    }
+
+    .main-secundario img    {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 20%;
+    }
+
+    .main_section_con	{
+        @include direccion (flex, column, center, center);
+        color: $colortext;
+    
+        .section_con_left	{
+            @include direccion (flex, column, center, center);
+            height: 390px;
+            padding: 10px;
+            margin-bottom:  10px;
+            background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/ubi.jpg);
+            border-radius: 10px;
+        }
+    
+        .section_con_rigth	{
+            padding: 0px;
+        }
+    }
+
+    .section_con_rigthone	{
+        @include direccion (flex, column, space-evenly, center);
+        height: 190px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        border-radius: 10px;
+    }
+
+    .section_con_rigthtwo	{
+        @include direccion (flex, column, space-evenly, center);
+        height: 190px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        border-radius: 10px;
+    }
+}
