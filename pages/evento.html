@@ -21,16 +21,16 @@
               <a class="nav-link" href="./index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+              <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/evento.html">Evento</a>
+              <a class="nav-link" href="../pages/evento.html">Evento</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/guia.html">Guia</a>
+              <a class="nav-link" href="../pages/guia.html">Guia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/comprar.html">Comprar</a>
+              <a class="nav-link" href="../pages/comprar.html">Comprar</a>
             </li>
           </ul>
         </div>
@@ -38,8 +38,8 @@
     </nav>
   </header>
 	<main class="container-fluid main_event_gen col-12">
-		<div class="row col-12">
-			<div class="main_event_con col-12 col-sm-7">
+		<div class="row col-12 col-md-9">
+			<div class="main_event_con col-12 col-md-7">
 				<h1>¿Que son los eventos?</h1>
 				<p>Los eventos en el mundo de Marvel son como los episodios más emocionantes de una serie de televisión, pero en forma de cómics.</p>
         <div class="buttons-div row col-12">
@@ -47,49 +47,78 @@
           <button class="button-event col-5">Donde empezar</button>
         </div>
 			</div>
-			<img class="img-fluid col-12 col-sm-6" src="../multimedia/back.jpg">
+			<img class="img-fluid col-12 col-md-5" src="../multimedia/back.jpg">
 		</div>
 	</main>
-  <section class="container-fluid main_event_section col-12">
+  <section class="container-fluid main_section_event col-12">
+		<div class="row">
+			<h2>Mas sobre Marvel</h2>
+			<div class="container-fluid main_section_con col-12 col-sm-10">
+				<div class="center_flex row col-12">
+					<div class="section_con_left col-12 col-sm-6">
+						<h3>Top Ventas</h3>
+						<p>Buenos Aires - Argentina</p>
+						<p>Villa Urquiza</p>
+					</div>
+					<div class="section_con_rigth col-12 col-sm-5">
+						<div class="container-fluid section_con_rigthone">
+							<h3>Top Peliculas</h3>
+							<p>GitHub - FranNorona</p>
+							<p>Instagram - Fraanstorni</p>
+						</div>
+						<div class="container section_con_rigthtwo">
+							<h5>Top Series</h5>
+							<p>W3School</p>
+							<p>Bing AI</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <section class="main_event_section col-12">
     <h2>Top Eventos</h2>
-  <div class="row col-12">
-      <div id="demo" class="carousel slide col-12" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <div class="row col-12 col-sm-5">
+      <div id="demo" class="carousel slide main_event_section_con col-sm-12 d-block" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card_event">
+            <img class="card_event_img_con img-fluid" src="../multimedia/secretswars.jpg" alt="Card image">
+            <div class="card-body">
+              <h3 class="card-title">Secrets Wars</h3>
+              <p class="card-text">Evento 2015</p>
+            </div>  
+          </div>
         </div>
-        <div class="container-fluid carousel-inner">
-          <div class="carousel-item active">
-            <div class="card_event">
-              <img class="card_event_img_con img-fluid d-block w-100" src="../multimedia/secretswars.jpg" alt="Card image">
-              <div class="card-body">
-                <h3 class="card-title">Secrets Wars</h3>
-                <p class="card-text">Evento 2015</p>
-              </div>
-            </div>
+        <div class="carousel-item">
+          <div class="card_event">
+            <img class="card_event_img_con img-fluid" src="../multimedia/secretswars.jpg" alt="Card image">
+            <div class="card-body">
+              <h3 class="card-title">Secrets Wars</h3>
+              <p class="card-text">Evento 2015</p>
+            </div>  
           </div>
-          <div class="carousel-item">
-            <div class="card_event">
-              <img class="card_event_img_con d-block w-100" src="../multimedia/elviejologan.jpg" alt="Card image">
-              <div class="card-body">
-                <h3 class="card-title">El Viejo Logan</h3>
-                <p class="card-text">Publicado 2010</p>
-              </div>
-            </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card_event">
+            <img class="card_event_img_con img-fluid" src="../multimedia/secretswars.jpg" alt="Card image">
+            <div class="card-body">
+              <h3 class="card-title">Secrets Wars</h3>
+              <p class="card-text">Evento 2015</p>
+            </div>  
           </div>
-      </div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div>
-          <h4>Top Ventas</h4>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <img src="" alt="">
         </div>
       </div>
-  </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    </div>
   </section>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

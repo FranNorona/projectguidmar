@@ -260,14 +260,12 @@ a:hover {
 /* -----COMIENZA PAGE EVENTO----- */
 .main_event_gen {
     @include direccion (flex, column, center, center);
+    padding-top: 75px;
     color: $colortext;
 
     .main_event_con {
         @include direccion (flex, column, center, center);
 
-        h1  {
-            padding-top: 75px;
-        }
 
         .buttons-div {
             @include direccion (flex, row, space-evenly, center);
@@ -286,26 +284,35 @@ a:hover {
     }
 }
 
-.main_event_section {
-    @include direccion (flex, column, center, center);
+.main_section_event {
+    padding: 20px;
+    text-align: center;
+    color: $colortext;
 
-    h2 {
-        padding: 20px;
-        color: $colortext;
+    h2  {
+        padding: 10px;
     }
 }
 
-.carousel-item  {
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    color: $colortext;
-    border-radius: 10px;
-    background-image: url(../multimedia/arcoiris.jpg);
+.main_event_section {
+    @include direccion (flex, column, center, center);
+    padding: 20px;
+
+    h2  {
+        padding-bottom: 10px;
+    }
+
+    .main_event_section_con {
+        @include direccion (flex, row, center, center);
+        padding: 15px;
+        text-align: center;
+        color: $colortext;
+        background-image: url(../multimedia/arcoiris.jpg);
+        border-radius: 15px;
+    }
 }
 
 .card_event_img_con {
-    height: 290px;
     border-radius: 10px;
 }
 /* -----COMIENZA EL FOOTER----- */

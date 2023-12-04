@@ -271,6 +271,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 75px;
   color: white;
 }
 .main_event_gen .main_event_con {
@@ -278,9 +279,6 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.main_event_gen .main_event_con h1 {
-  padding-top: 75px;
 }
 .main_event_gen .main_event_con .buttons-div {
   display: flex;
@@ -303,28 +301,38 @@ a:hover {
   box-shadow: inset 0 0 10px rgb(227, 39, 35), 0 0 9px 3px rgba(227, 39, 35, 0.7);
 }
 
+.main_section_event {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.main_section_event h2 {
+  padding: 10px;
+}
+
 .main_event_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .main_event_section h2 {
-  padding: 20px;
-  color: white;
+  padding-bottom: 10px;
 }
-
-.carousel-item {
-  padding: 10px;
-  margin-bottom: 10px;
+.main_event_section .main_event_section_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
   text-align: center;
   color: white;
-  border-radius: 10px;
   background-image: url(../multimedia/arcoiris.jpg);
+  border-radius: 15px;
 }
 
 .card_event_img_con {
-  height: 290px;
   border-radius: 10px;
 }
 
