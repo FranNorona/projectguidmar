@@ -45,6 +45,13 @@ a   {
 a:hover {
     color: white;
 }
+
+video   {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 65px;
+}
 /* -----COMIENZA EL HEADER y NAV----- */
 .nav-container  {
     background-color: rgba(0, 0, 0, 0.5);
@@ -314,6 +321,35 @@ a:hover {
 
 .card_event_img_con {
     border-radius: 10px;
+}
+/* -----COMIENZA PAGE GUIA----- */
+.section_guide_gen  {
+    @include direccion (flex, column, center, center);
+    color: $colortext;
+    
+    h1  {
+        padding: 10px;
+    }
+}
+
+.guia_box   {
+    @include direccion (flex, column, center, center);
+    padding: 10px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-image: url(../multimedia/arcoiris.jpg);
+
+    img {
+        height: 300px;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+
+    div   {
+        text-align: center;
+        padding: 10px;
+    }
 }
 /* -----COMIENZA EL FOOTER----- */
 .footer-container   {
