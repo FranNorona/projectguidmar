@@ -9,6 +9,19 @@ $colortext2: grey;
 $fontstitles: 'Roboto Condensed', sans-serif;
 $fontstext: 'Roboto', sans-serif;
 
+//Imagenes
+$arcoiris: url(../multimedia/arcoiris.jpg);
+$background: url(../multimedia/back.jpg);
+$background2: url(../multimedia/background.jpg);
+$ubicacion: url(../multimedia/ubi.jpg);
+$redes: url(../multimedia/redessociales.jpg);
+$recursos: url(../multimedia/recursosdigitales.jpg);
+$topventas: url(../multimedia/topventas.jpg);
+$toppelis: url(../multimedia/toppeliculas.jpg);
+$topseries: url(../multimedia/topseries.jpg);
+$comprasback: url(../multimedia/comprasback2.jpg);
+
+
 @mixin direccion ($dsp, $flexd, $justify, $align) {
     display: $dsp;
     flex-direction: $flexd;
@@ -35,6 +48,7 @@ $fontstext: 'Roboto', sans-serif;
 body    {
     background-color: black;
     font-family: $fontstext;
+    color: $colortext;
 }
 
 a   {
@@ -44,6 +58,10 @@ a   {
 
 a:hover {
     color: white;
+}
+
+h1, h2, h3, h4, h5  {
+    font-family: $fontstitles;
 }
 
 video   {
@@ -82,16 +100,14 @@ video   {
 .main-container  {
     height: 550px;
     letter-spacing: 1px;
-    background-image: linear-gradient(345deg, rgba(3,0,0,1)45%, rgba(255,255,255,0.1)80%), url(../multimedia/back.jpg);
+    background-image: linear-gradient(345deg, rgba(3,0,0,1)45%, rgba(255,255,255,0.1)80%), $background;
 }
 
 .main-principal {
     height: auto;
-    color: $colortext;
 
         h1  {
             padding-top: 100px;
-            font-family: $fontstitles;
             font-size: 40px;
         }
 
@@ -103,7 +119,6 @@ video   {
 .button-main    {
     @include boton (140px, 40px, 15px, 1px, 8px, 1px solid #C70C1D);
     background: linear-gradient(to right, rgba(199, 12, 29, 0.3) 1%, transparent 40%,transparent 60% , rgba(199, 12, 29, 0.3) 100%);
-    color: $colortext;
 }
 
 .button-main:hover  {
@@ -121,16 +136,14 @@ video   {
 .section-main   {
     height: auto;
     margin-bottom: 20px;
-    color: $colortext;
     text-align: center;
 }
 
 .card-one {
     @include direccion (flex, column, space-evenly, center);
     height: auto;
-    color: $colortext;
     border-radius: 10px;
-    background-image: url(../multimedia/arcoiris.jpg);
+    background-image: $arcoiris;
 }
 
 .card-one:hover{
@@ -149,7 +162,6 @@ video   {
 
         h2  {
             padding: 20px;
-            font-family: 'Roboto Condensed', sans-serif;
             text-transform: uppercase;
         }
 
@@ -168,8 +180,8 @@ video   {
 }
 /* -----COMIENZA PAGE NOSOTROS----- */
 .main_general_about	{
-	color: $colortext;
-    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+    min-height: 70vw;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.7)100%, rgba(255,255,255,0.1)0%), $background2;
 
     .main_general_con	{
         @include direccion(flex, column, space-around, center);
@@ -179,21 +191,26 @@ video   {
             @include direccion(flex, column, center, center);
             padding: 10px;
             text-align: center;
+            letter-spacing: 1px;
 
             h1  {
                 margin-right: 55px;
-                font-family: $fontstitles;
                 font-size: 30px;
+                text-transform: uppercase;
             }
 
             h2  {
                 margin-left: 65px;
-                font-family: $fontstitles;
                 font-size: 30px;
+                text-transform: uppercase;
             }
 
             p   {
                 padding-top: 40px;
+            }
+
+            button  {
+                color: $colortext;
             }
         }
 
@@ -209,24 +226,17 @@ video   {
     }
 }
 .main_section_gen   {
-    h4  {
-        font-family: $fontstitles;
-        font-size: 25px;
-        padding: 10px;
-        color: $colortext;
-        text-align: center;
-        }
+    padding-top: 10px;
 }
 .main_section_con	{
     @include direccion (flex, column, center, center);
-    color: $colortext;
 
     .section_con_left	{
         @include direccion (flex, column, center, center);
         height: 250px;
         padding: 10px;
         margin-bottom:  10px;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/ubi.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $ubicacion;
         border-radius: 10px;
     }
 
@@ -244,7 +254,7 @@ video   {
     height: 250px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $redes;
     border-radius: 10px;
 }
 
@@ -257,7 +267,7 @@ video   {
     height: 250px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $recursos;
     border-radius: 10px;
 }
 
@@ -268,10 +278,21 @@ video   {
 .main_event_gen {
     @include direccion (flex, column, center, center);
     padding-top: 75px;
-    color: $colortext;
+    min-height: 60vw;
 
     .main_event_con {
         @include direccion (flex, column, center, center);
+        padding: 10px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    h1  {
+        padding: 10px;
+    }
+
+    p   {
+        padding-top: 20px;
     }
 
     img {
@@ -296,14 +317,49 @@ video   {
     }
 }
 
-.main_section_event {
-    padding: 20px;
-    text-align: center;
-    color: $colortext;
+.main_section_event  {
+    padding-top: 10px;
+}
+.section_event_con	{
+    @include direccion (flex, column, center, center);
 
-    h2  {
+    .section_event_con_left	{
+        @include direccion (flex, column, center, center);
+        height: 310px;
         padding: 10px;
+        margin-bottom:  10px;
+        text-align: center;
+        font-weight: bold;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $topventas;
+        background-position: top;
+        border-radius: 10px;
     }
+
+    .section_con_rigth	{
+        padding: 0px;
+    }
+}
+
+.center_flex  {
+        @include direccion (flex, column, center, center);
+}
+
+.section_event_con_rigthone	{
+    @include direccion (flex, column, flex-start, center);
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $toppelis;
+    border-radius: 10px;
+}
+
+.section_event_con_rigthtwo	{
+    @include direccion (flex, column, flex-start, center);
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $topseries;
+    border-radius: 10px;
 }
 
 .main_event_section {
@@ -318,22 +374,23 @@ video   {
         @include direccion (flex, row, center, center);
         padding: 15px;
         text-align: center;
-        color: $colortext;
-        background-image: url(../multimedia/arcoiris.jpg);
+        background-image: $arcoiris;
         border-radius: 15px;
     }
 }
 
 .card_event_img_con {
+    height: 300px;
     border-radius: 10px;
 }
 /* -----COMIENZA PAGE GUIA----- */
 .section_guide_gen  {
-    @include direccion (flex, column, center, center);
-    color: $colortext;
-    
-    h1  {
-        padding: 10px;
+    @include direccion (flex, row, center, center);
+    min-height: 60vw;
+
+    h1, h2, h3 {
+        font-size: 30px;
+        padding: 5px;
     }
 }
 
@@ -343,7 +400,7 @@ video   {
     height: auto;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-image: url(../multimedia/arcoiris.jpg);
+    background-image: $arcoiris;
 
     img {
         height: 300px;
@@ -356,12 +413,11 @@ video   {
         padding: 10px;
     }
 }
-/* -----COMIENZA EL FOOTER----- */
+/* -----COMIENZA PAGE COMPRA----- */
 .main_comprar   {
     @include direccion (flex, column, center, center);
-    min-height: 80vw;
+    min-height: 60vw;
     padding-top: 75px;
-    color: $colortext;
 
     .clubdelcomic   {
         @include direccion (flex, column, center, center);
@@ -369,15 +425,23 @@ video   {
         margin-bottom: 20px;
         text-align: center;
         border-radius: 10px;
-        background-image: url(../multimedia/comprasback2.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $comprasback;
+
+        h1, h2  {
+            font-size: 30px;
+            padding: 10px;
+        }
 
         img {
             width: 300px;
             height: 250px;
             margin: 10px;
             border-radius: 10px;
-            background-color: #C70C1D;
             object-fit: cover;
+        }
+
+        button  {
+            color: $colortext;
         }
     }
 }
@@ -402,8 +466,7 @@ video   {
 /* MEDIA QUERIES */
 @media screen and (min-width: 576px) {
     .main_general_about	{
-        color: $colortext;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.7)100%, rgba(255,255,255,0.1)0%), $background2;
     
         .main_general_con	{
             @include direccion(flex, row, space-around, center);
@@ -416,13 +479,11 @@ video   {
     
                 h1  {
                     margin-right: 55px;
-                    font-family: $fontstitles;
                     font-size: 35px;
                 }
     
                 h2  {
                     margin-left: 65px;
-                    font-family: $fontstitles;
                     font-size: 35px;
                 }
     
@@ -452,7 +513,7 @@ video   {
         height: 120px;
         padding: 10px;
         margin-bottom: 10px;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $redes;
         border-radius: 10px;
     }
 
@@ -461,7 +522,7 @@ video   {
         height: 120px;
         padding: 10px;
         margin-bottom: 10px;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $recursos;
         border-radius: 10px;
     }
 }
@@ -480,16 +541,14 @@ video   {
 
     .main-principal h1  {
         padding-top: 100px;
-        font-family: $fontstitles;
         font-size: 45px;
     }
 
     .card-one {
         @include direccion (flex, column, space-evenly, center);
         height: 250px;
-        color: $colortext;
         border-radius: 10px;
-        background-image: url(../multimedia/arcoiris.jpg);
+        background-image: $arcoiris;
     }
 
     .card-one-img   {
@@ -504,8 +563,7 @@ video   {
     }
 
     .main_general_about	{
-        color: $colortext;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/back.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.7)100%, rgba(255,255,255,0.1)0%), $background2;
     
         .main_general_con	{
             @include direccion(flex, row, space-around, center);
@@ -519,13 +577,11 @@ video   {
     
                 h1  {
                     margin-right: 55px;
-                    font-family: $fontstitles;
                     font-size: 35px;
                 }
     
                 h2  {
                     margin-left: 65px;
-                    font-family: $fontstitles;
                     font-size: 35px;
                 }
     
@@ -538,6 +594,7 @@ video   {
                 @include direccion(flex, column, center, center);
                 text-align: center;
                 padding: 10px;
+                padding-top: 86px;
     
                 p   {
                     color: $colortext2;
@@ -546,7 +603,26 @@ video   {
         }
     }
 
+    .guia_box   {
+        @include direccion (flex, row, space-evenly, center);
+        padding: 10px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-image: $arcoiris;
     
+        img {
+            padding: 5px;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+    
+        div   {
+            text-align: center;
+            padding: 10px;
+        }
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -572,16 +648,58 @@ video   {
         object-fit: contain;
     }
 
+    .main_general_about	{
+        min-height: 50vw;
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.7)100%, rgba(255,255,255,0.1)0%), $background2;
+    
+        .main_general_con	{
+            @include direccion(flex, row, space-around, center);
+            padding-top: 75px;
+    
+            .main_about_left	{
+                @include direccion(flex, column, center, flex-start);
+                height: 500px;
+                padding: 10px;
+                text-align: left;
+    
+                h1  {
+                    margin-right: 55px;
+                    font-size: 35px;
+                }
+    
+                h2  {
+                    margin-left: 65px;
+                    font-size: 35px;
+                }
+    
+                p   {
+                    padding-top: 40px;
+                }
+            }
+    
+            .main_about_rigth   {
+                @include direccion(flex, column, center, center);
+                text-align: center;
+                padding: 10px;
+                padding-top: 36px;
+    
+                p   {
+                    color: $colortext2;
+                }
+            }
+        }
+    }
+
     .main_section_con	{
         @include direccion (flex, column, center, center);
-        color: $colortext;
+        padding: 20px;
     
         .section_con_left	{
             @include direccion (flex, column, center, center);
             height: 390px;
             padding: 10px;
             margin-bottom:  10px;
-            background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/ubi.jpg);
+            background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $ubicacion;
             border-radius: 10px;
         }
     
@@ -595,7 +713,7 @@ video   {
         height: 190px;
         padding: 10px;
         margin-bottom: 10px;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $redes;
         border-radius: 10px;
     }
 
@@ -604,7 +722,82 @@ video   {
         height: 190px;
         padding: 10px;
         margin-bottom: 10px;
-        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), url(../multimedia/redes.jpg);
+        background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $recursos;
         border-radius: 10px;
+    }
+
+    .main_event_gen {
+        @include direccion (flex, column, center, center);
+        padding-top: 20px;
+        min-height: 50vw;
+    
+        .main_event_con {
+            @include direccion (flex, column, center, center);
+            padding: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    
+        h1  {
+            padding: 10px;
+        }
+    
+        p   {
+            padding-top: 20px;
+        }
+    
+        img {
+            padding: 10px;
+            height: 280px;
+            object-fit: contain;
+        }
+    
+        .buttons-div {
+            @include direccion (flex, row, space-evenly, center);
+            padding: 10px;
+        }
+    
+        .button-event   {
+            @include boton (45%, 40px, 12px, 1px, 8px, 1px solid #C70C1D);
+            background: linear-gradient(to right, rgba(199, 12, 29, 0.3) 1%, transparent 40%,transparent 60% , rgba(199, 12, 29, 0.3) 100%);
+            color: $colortext;
+        }
+    
+        .button-event:hover  {
+            box-shadow: inset 0 0 10px rgba(227, 39, 35, 1), 0 0 9px 3px rgba(227, 39, 35, 0.7);
+        }
+    }
+
+    .main_comprar   {
+        @include direccion (flex, column, center, center);
+        min-height: 60vw;
+        padding-top: 75px;
+    
+        .clubdelcomic   {
+            @include direccion (flex, column, space-evenly, center);
+            padding: 10px;
+            height: 600px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(345deg, rgba(3,0,0,0.5)100%, rgba(255,255,255,0.1)0%), $comprasback;
+    
+            h1, h2  {
+                font-size: 30px;
+                padding: 10px;
+            }
+    
+            img {
+                width: 300px;
+                height: 250px;
+                margin: 10px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+    
+            button  {
+                color: $colortext;
+            }
+        }
     }
 }

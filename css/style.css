@@ -9,6 +9,7 @@
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 a {
@@ -18,6 +19,10 @@ a {
 
 a:hover {
   color: white;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 video {
@@ -67,11 +72,9 @@ video {
 
 .main-principal {
   height: auto;
-  color: white;
 }
 .main-principal h1 {
   padding-top: 100px;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 40px;
 }
 .main-principal p {
@@ -86,7 +89,6 @@ video {
   border-radius: 8px;
   border: 1px solid #C70C1D;
   background: linear-gradient(to right, rgba(199, 12, 29, 0.3) 1%, transparent 40%, transparent 60%, rgba(199, 12, 29, 0.3) 100%);
-  color: white;
 }
 
 .button-main:hover {
@@ -104,7 +106,6 @@ video {
 .section-main {
   height: auto;
   margin-bottom: 20px;
-  color: white;
   text-align: center;
 }
 
@@ -114,7 +115,6 @@ video {
   justify-content: space-evenly;
   align-items: center;
   height: auto;
-  color: white;
   border-radius: 10px;
   background-image: url(../multimedia/arcoiris.jpg);
 }
@@ -141,7 +141,6 @@ video {
 }
 .card-one-titles h2 {
   padding: 20px;
-  font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
 .card-one-titles p {
@@ -161,8 +160,8 @@ video {
 
 /* -----COMIENZA PAGE NOSOTROS----- */
 .main_general_about {
-  color: white;
-  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/back.jpg);
+  min-height: 70vw;
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.7) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/background.jpg);
 }
 .main_general_about .main_general_con {
   display: flex;
@@ -178,19 +177,23 @@ video {
   align-items: center;
   padding: 10px;
   text-align: center;
+  letter-spacing: 1px;
 }
 .main_general_about .main_general_con .main_about_left h1 {
   margin-right: 55px;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 30px;
+  text-transform: uppercase;
 }
 .main_general_about .main_general_con .main_about_left h2 {
   margin-left: 65px;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 30px;
+  text-transform: uppercase;
 }
 .main_general_about .main_general_con .main_about_left p {
   padding-top: 40px;
+}
+.main_general_about .main_general_con .main_about_left button {
+  color: white;
 }
 .main_general_about .main_general_con .main_about_rigth {
   display: flex;
@@ -204,12 +207,8 @@ video {
   color: grey;
 }
 
-.main_section_gen h4 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 25px;
-  padding: 10px;
-  color: white;
-  text-align: center;
+.main_section_gen {
+  padding-top: 10px;
 }
 
 .main_section_con {
@@ -217,7 +216,6 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 .main_section_con .section_con_left {
   display: flex;
@@ -249,7 +247,7 @@ video {
   height: 250px;
   padding: 10px;
   margin-bottom: 10px;
-  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redessociales.jpg);
   border-radius: 10px;
 }
 
@@ -265,7 +263,7 @@ video {
   height: 250px;
   padding: 10px;
   margin-bottom: 10px;
-  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/recursosdigitales.jpg);
   border-radius: 10px;
 }
 
@@ -280,13 +278,22 @@ video {
   justify-content: center;
   align-items: center;
   padding-top: 75px;
-  color: white;
+  min-height: 60vw;
 }
 .main_event_gen .main_event_con {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.main_event_gen h1 {
+  padding: 10px;
+}
+.main_event_gen p {
+  padding-top: 20px;
 }
 .main_event_gen img {
   padding: 10px;
@@ -316,12 +323,62 @@ video {
 }
 
 .main_section_event {
-  padding: 20px;
-  text-align: center;
-  color: white;
+  padding-top: 10px;
 }
-.main_section_event h2 {
+
+.section_event_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section_event_con .section_event_con_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 310px;
   padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/topventas.jpg);
+  background-position: top;
+  border-radius: 10px;
+}
+.section_event_con .section_con_rigth {
+  padding: 0px;
+}
+
+.center_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_event_con_rigthone {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/toppeliculas.jpg);
+  border-radius: 10px;
+}
+
+.section_event_con_rigthtwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/topseries.jpg);
+  border-radius: 10px;
 }
 
 .main_event_section {
@@ -341,25 +398,26 @@ video {
   align-items: center;
   padding: 15px;
   text-align: center;
-  color: white;
   background-image: url(../multimedia/arcoiris.jpg);
   border-radius: 15px;
 }
 
 .card_event_img_con {
+  height: 300px;
   border-radius: 10px;
 }
 
 /* -----COMIENZA PAGE GUIA----- */
 .section_guide_gen {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white;
+  min-height: 60vw;
 }
-.section_guide_gen h1 {
-  padding: 10px;
+.section_guide_gen h1, .section_guide_gen h2, .section_guide_gen h3 {
+  font-size: 30px;
+  padding: 5px;
 }
 
 .guia_box {
@@ -384,15 +442,14 @@ video {
   padding: 10px;
 }
 
-/* -----COMIENZA EL FOOTER----- */
+/* -----COMIENZA PAGE COMPRA----- */
 .main_comprar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80vw;
+  min-height: 60vw;
   padding-top: 75px;
-  color: white;
 }
 .main_comprar .clubdelcomic {
   display: flex;
@@ -403,16 +460,22 @@ video {
   margin-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-  background-image: url(../multimedia/comprasback2.jpg);
+  background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/comprasback2.jpg);
+}
+.main_comprar .clubdelcomic h1, .main_comprar .clubdelcomic h2 {
+  font-size: 30px;
+  padding: 10px;
 }
 .main_comprar .clubdelcomic img {
   width: 300px;
   height: 250px;
   margin: 10px;
   border-radius: 10px;
-  background-color: #C70C1D;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main_comprar .clubdelcomic button {
+  color: white;
 }
 
 /* -----COMIENZA EL FOOTER----- */
@@ -443,8 +506,7 @@ video {
 /* MEDIA QUERIES */
 @media screen and (min-width: 576px) {
   .main_general_about {
-    color: white;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/back.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.7) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/background.jpg);
   }
   .main_general_about .main_general_con {
     display: flex;
@@ -463,12 +525,10 @@ video {
   }
   .main_general_about .main_general_con .main_about_left h1 {
     margin-right: 55px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
   }
   .main_general_about .main_general_con .main_about_left h2 {
     margin-left: 65px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
   }
   .main_general_about .main_general_con .main_about_left p {
@@ -499,7 +559,7 @@ video {
     height: 120px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redessociales.jpg);
     border-radius: 10px;
   }
   .section_con_rigthtwo {
@@ -510,7 +570,7 @@ video {
     height: 120px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/recursosdigitales.jpg);
     border-radius: 10px;
   }
 }
@@ -529,7 +589,6 @@ video {
   }
   .main-principal h1 {
     padding-top: 100px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 45px;
   }
   .card-one {
@@ -538,7 +597,6 @@ video {
     justify-content: space-evenly;
     align-items: center;
     height: 250px;
-    color: white;
     border-radius: 10px;
     background-image: url(../multimedia/arcoiris.jpg);
   }
@@ -558,8 +616,7 @@ video {
     padding-bottom: 0px;
   }
   .main_general_about {
-    color: white;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/back.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.7) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/background.jpg);
   }
   .main_general_about .main_general_con {
     display: flex;
@@ -579,12 +636,10 @@ video {
   }
   .main_general_about .main_general_con .main_about_left h1 {
     margin-right: 55px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
   }
   .main_general_about .main_general_con .main_about_left h2 {
     margin-left: 65px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
   }
   .main_general_about .main_general_con .main_about_left p {
@@ -597,9 +652,32 @@ video {
     align-items: center;
     text-align: center;
     padding: 10px;
+    padding-top: 86px;
   }
   .main_general_about .main_general_con .main_about_rigth p {
     color: grey;
+  }
+  .guia_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-image: url(../multimedia/arcoiris.jpg);
+  }
+  .guia_box img {
+    padding: 5px;
+    height: 300px;
+    border-radius: 10px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .guia_box div {
+    text-align: center;
+    padding: 10px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -626,12 +704,55 @@ video {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .main_general_about {
+    min-height: 50vw;
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.7) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/background.jpg);
+  }
+  .main_general_about .main_general_con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 75px;
+  }
+  .main_general_about .main_general_con .main_about_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 500px;
+    padding: 10px;
+    text-align: left;
+  }
+  .main_general_about .main_general_con .main_about_left h1 {
+    margin-right: 55px;
+    font-size: 35px;
+  }
+  .main_general_about .main_general_con .main_about_left h2 {
+    margin-left: 65px;
+    font-size: 35px;
+  }
+  .main_general_about .main_general_con .main_about_left p {
+    padding-top: 40px;
+  }
+  .main_general_about .main_general_con .main_about_rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-top: 36px;
+  }
+  .main_general_about .main_general_con .main_about_rigth p {
+    color: grey;
+  }
   .main_section_con {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    padding: 20px;
   }
   .main_section_con .section_con_left {
     display: flex;
@@ -655,7 +776,7 @@ video {
     height: 190px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redessociales.jpg);
     border-radius: 10px;
   }
   .section_con_rigthtwo {
@@ -666,7 +787,91 @@ video {
     height: 190px;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/redes.jpg);
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/recursosdigitales.jpg);
     border-radius: 10px;
+  }
+  .main_event_gen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    min-height: 50vw;
+  }
+  .main_event_gen .main_event_con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .main_event_gen h1 {
+    padding: 10px;
+  }
+  .main_event_gen p {
+    padding-top: 20px;
+  }
+  .main_event_gen img {
+    padding: 10px;
+    height: 280px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main_event_gen .buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+  .main_event_gen .button-event {
+    width: 45%;
+    height: 40px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    border: 1px solid #C70C1D;
+    background: linear-gradient(to right, rgba(199, 12, 29, 0.3) 1%, transparent 40%, transparent 60%, rgba(199, 12, 29, 0.3) 100%);
+    color: white;
+  }
+  .main_event_gen .button-event:hover {
+    box-shadow: inset 0 0 10px rgb(227, 39, 35), 0 0 9px 3px rgba(227, 39, 35, 0.7);
+  }
+  .main_comprar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vw;
+    padding-top: 75px;
+  }
+  .main_comprar .clubdelcomic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    height: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-image: linear-gradient(345deg, rgba(3, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.1) 0%), url(../multimedia/comprasback2.jpg);
+  }
+  .main_comprar .clubdelcomic h1, .main_comprar .clubdelcomic h2 {
+    font-size: 30px;
+    padding: 10px;
+  }
+  .main_comprar .clubdelcomic img {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main_comprar .clubdelcomic button {
+    color: white;
   }
 }/*# sourceMappingURL=style.css.map */
